@@ -110,14 +110,6 @@
                     <libs>
                         <lib>${java.home}/lib/rt.jar</lib>
                     </libs>
-                    <options>
-                        <option>-keep class ch.qos.logback.** { *; }</option>
-                        <option>-keep class org.slf4j.** { *; }</option>
-                        <option>-dontwarn</option>
-                        <option>-keepclasseswithmembers public class * { public static void main(java.lang.String[]); }</option>
-                        <option>-keepattributes Signature</option>
-                        <option>-keepattributes *Annotation*</option>
-                    </options>
                 </configuration>
             </plugin>
 
