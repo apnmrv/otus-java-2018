@@ -3,6 +3,6 @@
 
 Группа 2018-04
 
-Автор Андрей Пономарев (Andrey Ponomarev)
+Andrey Ponomarev (Андрей Пономарев)
 
 apnmrv@gmail.com
