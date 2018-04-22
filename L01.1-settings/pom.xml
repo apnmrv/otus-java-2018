@@ -7,10 +7,7 @@
     <!-- Project Object Model -->
 
     <name>L01.1-settings</name>
-    <description>
-        OTUS Java Developer Course : Homework L01 : Project Settings
-    </description>
-
+    <description>OTUS Java Developer Course : Homework L01 : Project Settings</description>
     <developers>
         <developer>
             <name>apnmrv</name>
@@ -30,8 +27,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <com.google.guava.version>23.0</com.google.guava.version>
-        <proguard.version>6.0</proguard.version>
+        <com.google.guava.version>22.0</com.google.guava.version>
+        <version.proguard-base>6.0.2</version.proguard-base>
     </properties>
 
     <dependencies>
@@ -41,47 +38,52 @@
             <artifactId>guava</artifactId>
             <version>${com.google.guava.version}</version>
         </dependency>
-
         <dependency>
             <groupId>net.sf.proguard</groupId>
             <artifactId>proguard-base</artifactId>
-            <version>${proguard.version}</version>
+            <version>6.0.2</version>
+            <scope>runtime</scope>
         </dependency>
-
     </dependencies>
-
     <build>
-        <finalName>${project.name}</finalName>
+        <finalName>${project.name}-${project.version}</finalName>
 
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.0</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>ru.otus.l011.Main</mainClass>
-                        </manifest>
-                    </archive>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
-            </plugin>
-
+            </plugin> <!--maven-compiler-plugin-->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.0.0</version>
                 <executions>
                     <execution>
-                        <id>my-maven-assembly-plugin</id>
-                        <phase>package</phase>
+                        <id>assembly</id>
                         <goals>
                             <goal>single</goal>
                         </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <archive>
+                                <manifest>
+                                    <mainClass>ru.otus.l011.Main</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
                     </execution>
                 </executions>
+            </plugin> <!--maven-assembly-plugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
                 <configuration>
-                    <appendAssemblyId>false</appendAssemblyId>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
@@ -91,28 +93,34 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-
-
+            </plugin> <!--maven-jar-plugin-->
             <plugin>
                 <groupId>com.github.wvengen</groupId>
                 <artifactId>proguard-maven-plugin</artifactId>
-                <version>2.0.14</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals>
-                            <goal>proguard</goal>
-                        </goals>
+                        <goals><goal>proguard</goal></goals>
                     </execution>
                 </executions>
                 <configuration>
+                    <obfuscate>true</obfuscate>
+                    <injar>${project.build.finalName}-jar-with-dependencies.jar</injar>
+                    <outjar>${project.build.finalName}-small.jar</outjar>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <proguardInclude>${basedir}/proguard.conf</proguardInclude>
                     <libs>
-                        <lib>${java.home}/lib/rt.jar</lib>
+                        <lib>${env.JAVA_HOME}/lib/rt.jar</lib>
+                        <lib>${env.JAVA_HOME}/lib/jsse.jar</lib>
                     </libs>
+                    <options>
+                        <option>-keep class ru.otus.l011.Main{*;}</option>
+                        <option>-dontwarn</option>
+                        <option>-keepattributes Signature</option>
+                    </options>
+
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>

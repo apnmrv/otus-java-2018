@@ -1,7 +1,6 @@
 package ru.otus.l011;
 
 import com.google.common.collect.Lists;
-
 import java.util.*;
 
 /**
@@ -41,7 +40,9 @@ public class Main {
 
         Collections.shuffle((List<Integer>)example);
 
-        calcTime(() -> result.addAll(Lists.reverse((List<Integer>)example)));
+        calcTime(() -> {
+            result.addAll(Lists.reverse((List<Integer>) example));
+        });
     }
 
     private static void calcTime(Runnable runnable) {
