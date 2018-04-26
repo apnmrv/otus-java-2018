@@ -26,9 +26,9 @@ public class ArrayTutorApp
         act.deleteAnimal(5);
         act.showAnimals();
         act.log("*******************************");
-        act.log("Вставим Хомяка между "
+        act.log("Вставим Хомяка после "
                 + act.findAnimal(2)
-                + " и "
+                + " и перед"
                 + act.findAnimal(3));
         act.log("*******************************");
         act.insertAnimal(3,"Хомяк");
