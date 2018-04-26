@@ -2,36 +2,11 @@ package ru.otus;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.lang.String;
 
 public class StringTutor {
-    /**
-     * Замените все null в assertEquals на true или false
-     */
 
-    @Test
-    public void testStringEquals() {
-        String s1 = "aaa";
-        String s2 = "aaa";
-        s1.equals(s2);
-        String s3 = new String("aaa");
-        System.out.println("адрес объекта s1: "+System.identityHashCode(s1));
-        System.out.println("адрес объекта s2: "+System.identityHashCode(s2));
-        assertEquals(s1==s2, true);
-        assertEquals(s1.equals(s2), true);
-        System.out.println("адрес объекта s3: "+System.identityHashCode(s3));
-        assertEquals(s1==s3, false);
-        // метод intern() позволяет получить строку из пула строк
-        String s4 = s3.intern();
-        System.out.println("адрес объекта s4: "+System.identityHashCode(s4));
-        assertEquals(s1==s4, true);
-        // тестируем пересоздание объекта каждый раз при изменении
-        s3 = s3+"bbb";
-        System.out.println("адрес измененного объекта s3: "+System.identityHashCode(s3));
-        s3 = s3.substring(0, 3); // s3 снова "aaa"
-        assertEquals(s3==s1, false);
-        assertEquals(s3.equals(s1), true);
-        assertEquals(s3.intern()==s1, true);
-    }
+
 
     /**
      *  Убедитесь, что приветствие greeting имеет вид
@@ -43,11 +18,27 @@ public class StringTutor {
      *  причем имя и фамилия не короче 3 букв
      *  и начинаются с большой буквы
      */
-    @Test
     public boolean checkGreeting(String greeting) {
-        return true;
+
+        greeting = greeting.trim();
+        if (!greeting.substring(0,6).equalsIgnoreCase("Привет,")) {
+            System.out.println("В начале должно быть слово Привет и запятая");
+            return false;
+        }
+        if (greeting.charAt(greeting.length() {
+
+        }
+        // Characters from 1-st to "," --- Привет,
+        // Last char --- !
+        // There's a space inside a trimmed string from ","(excluded) to "!"
+        // Trimmed string from ","(excluded) to " " includes > 3 chars
+        // First char of the trimmed string from ","(excluded) to " " --- uppercase
+        // Trimmed string from space to ! includes > 3 chars
+        //
+        else return true;
     }
 
+    @Test
     public void testCheckGreeting() {
         assertTrue(checkGreeting("Привет, Иван Иванов!"));
         assertTrue(checkGreeting("Привет,Петр Первый!"));

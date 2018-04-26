@@ -4,10 +4,11 @@ package ru.otus;
  *
  *
  */
-public class App
+public class StringTutorApp
 {
     public static void main( String[] args )
     {
+
         return;
     }
 }

@@ -28,7 +28,7 @@ public class ArrayTutorApp
         act.log("*******************************");
         act.log("Вставим Хомяка после "
                 + act.findAnimal(2)
-                + " и перед"
+                + " и перед "
                 + act.findAnimal(3));
         act.log("*******************************");
         act.insertAnimal(3,"Хомяк");
