@@ -6,8 +6,6 @@ import java.lang.String;
 
 public class StringTutor {
 
-
-
     /**
      *  Убедитесь, что приветствие greeting имеет вид
      *  Привет, Иван Иванов!
@@ -18,24 +16,82 @@ public class StringTutor {
      *  причем имя и фамилия не короче 3 букв
      *  и начинаются с большой буквы
      */
-    public boolean checkGreeting(String greeting) {
+    public boolean checkGreeting(String str) {
 
-        greeting = greeting.trim();
-        if (!greeting.substring(0,6).equalsIgnoreCase("Привет,")) {
+        String fullString = str.trim();
+        int fullStringSize = fullString.length();
+        String greeting = fullString.substring(0,7);
+
+        System.out.println("Строка полностью : "+fullString);
+        System.out.println("Размер строки : "+fullStringSize);
+        System.out.println("Приветствие : "+greeting);
+
+        if (!greeting.equals("Привет,")) {
             System.out.println("В начале должно быть слово Привет и запятая");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
             return false;
         }
-        if (greeting.charAt(greeting.length() {
 
+        if (!fullString.endsWith("!")) {
+            System.out.println("В конце должен быть восклицательный знак");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
+            return false;
         }
-        // Characters from 1-st to "," --- Привет,
-        // Last char --- !
-        // There's a space inside a trimmed string from ","(excluded) to "!"
-        // Trimmed string from ","(excluded) to " " includes > 3 chars
-        // First char of the trimmed string from ","(excluded) to " " --- uppercase
-        // Trimmed string from space to ! includes > 3 chars
-        //
-        else return true;
+
+        String fullName = fullString.substring(fullString.indexOf(",")+1, fullStringSize-1).trim();
+        System.out.println("Имя и фамилия : "+fullName);
+
+        if (fullName.indexOf(" ") == -1) {
+            System.out.println("Должны быть указаны и имя, и фамилия");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
+            return false;
+        }
+
+        String firstName = fullName.substring(0,fullName.indexOf(" ")).trim();
+        int firstNameSize = firstName.length();
+        String firstNameInitial = String.valueOf(firstName.charAt(0));
+
+        String lastName = fullName.substring(firstNameSize+1).trim();
+        int lastNameSize = lastName.length();
+        String lastNameInitial = String.valueOf(lastName.charAt(0));
+
+        System.out.println("Имя : "+firstName);
+        System.out.println("Фамилия : "+lastName);
+
+        if (firstNameSize < 4) {
+            System.out.println("Имя слишком короткое");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
+            return false;
+        }
+
+        if (lastNameSize < 4) {
+            System.out.println("Фамилия слишком короткая");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
+            return false;
+        }
+
+        if (!firstNameInitial.equals(firstNameInitial.toUpperCase())) {
+            System.out.println("Первая буква имени должна быть заглавной");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
+            return false;
+        }
+
+        if (!lastNameInitial.equals(lastNameInitial.toUpperCase())) {
+            System.out.println("Первая буква имени должна быть заглавной");
+            System.out.println("Тест не пройден!");
+            System.out.println("#####################################");
+            return false;
+        }
+
+        System.out.println("Тест пройден!");
+        System.out.println("#####################################");
+        return true;
     }
 
     @Test
