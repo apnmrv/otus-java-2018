@@ -20,23 +20,14 @@ public class StringTutor {
 
         String fullString = str.trim();
         int fullStringSize = fullString.length();
-        String greeting = fullString.substring(0,7);
 
-        System.out.println("Строка полностью : "+fullString);
-        System.out.println("Размер строки : "+fullStringSize);
-        System.out.println("Приветствие : "+greeting);
-
-        if (!greeting.equals("Привет,")) {
+        if (!fullString.startsWith("Привет,")) {
             System.out.println("В начале должно быть слово Привет и запятая");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
         if (!fullString.endsWith("!")) {
             System.out.println("В конце должен быть восклицательный знак");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
@@ -45,8 +36,6 @@ public class StringTutor {
 
         if (fullName.indexOf(" ") == -1) {
             System.out.println("Должны быть указаны и имя, и фамилия");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
@@ -58,39 +47,26 @@ public class StringTutor {
         int lastNameSize = lastName.length();
         String lastNameInitial = String.valueOf(lastName.charAt(0));
 
-        System.out.println("Имя : "+firstName);
-        System.out.println("Фамилия : "+lastName);
-
         if (firstNameSize < 4) {
             System.out.println("Имя слишком короткое");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
         if (lastNameSize < 4) {
             System.out.println("Фамилия слишком короткая");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
         if (!firstNameInitial.equals(firstNameInitial.toUpperCase())) {
             System.out.println("Первая буква имени должна быть заглавной");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
         if (!lastNameInitial.equals(lastNameInitial.toUpperCase())) {
             System.out.println("Первая буква имени должна быть заглавной");
-            System.out.println("Тест не пройден!");
-            System.out.println("#####################################");
             return false;
         }
 
-        System.out.println("Тест пройден!");
-        System.out.println("#####################################");
         return true;
     }
 
