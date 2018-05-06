@@ -83,7 +83,7 @@
                         <manifest>
                             <mainClass>ru.otus.l011.Main</mainClass>
                         </manifest>
-                    </archive>
+                    </archive>          
                 </configuration>
             </plugin>
         </plugins>
