@@ -6,6 +6,8 @@ public class App
 {
 
     /*
+    * To build:
+    * mvn clean install
     * To start:
     * java -javaagent:target/ObjectSizeWithAgent-1.0-SNAPSHOT-agent.jar -jar target/ObjectSizeWithAgent-1.0-SNAPSHOT-main-with-dependencies.jar
     */
