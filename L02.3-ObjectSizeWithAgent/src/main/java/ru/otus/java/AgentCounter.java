@@ -4,15 +4,15 @@ import java.lang.instrument.Instrumentation;
 import java.lang.reflect.*;
 import java.util.*;
 
-public class MaxOttoVonStierlitz {
+public class AgentCounter {
 
     private static Instrumentation instrumentation;
 
     public static void premain(String args,
                                Instrumentation inst) {
 
-        MaxOttoVonStierlitz.instrumentation = inst;
-        System.out.println("Hello! I`m Stierlitz.");
+        AgentCounter.instrumentation = inst;
+        System.out.println("Hello! I`m AgentCounter.");
     }
 
     /** Get object size */
@@ -44,13 +44,16 @@ public class MaxOttoVonStierlitz {
             return 0;
         }
 
-        Class clazz = obj.getClass();
-        if (clazz.isArray()) {
-            addArrayElementsToStack(clazz, obj, stack);
+        Class aClass = obj.getClass();
+
+
+        if (aClass.isArray()) {
+            // counting primitives
+            addArrayElementsToStack(aClass, obj, stack);
         } else {
-            // add all non-primitive fields to the stack
-            while (clazz != null) {
-                Field[] fields = clazz.getDeclaredFields();
+            // counting non-primitives
+            while (aClass != null) {
+                Field [] fields = aClass.getDeclaredFields();
                 for (Field field : fields) {
                     if (!Modifier.isStatic(field.getModifiers())
                             && !field.getType().isPrimitive()) {
@@ -62,7 +65,7 @@ public class MaxOttoVonStierlitz {
                         }
                     }
                 }
-                clazz = clazz.getSuperclass();
+                aClass = aClass.getSuperclass();
             }
         }
         checked.put(obj, null);

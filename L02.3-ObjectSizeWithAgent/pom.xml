@@ -12,8 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.9</maven.compiler.source>
-    <maven.compiler.target>1.9</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -50,9 +50,11 @@
           <version>3.0.2</version>
             <configuration>
                 <classifier>main-with-dependencies</classifier>
-                <!--<excludes>-->
-                    <!--<exclude>ru/otus/java/Max*.*</exclude>-->
-                <!--</excludes>-->
+                <includes>
+                    <include>ru/otus/java/App.*</include>
+                    <include>ru/otus/java/Parent.*</include>
+                    <include>ru/otus/java/Child.*</include>
+                </includes>
                 <archive>
                     <manifest>
                         <addClasspath>true</addClasspath>
@@ -72,14 +74,14 @@
                     <configuration>
                         <classifier>agent</classifier>
                         <includes>
-                            <include>ru/otus/java/Max*.*</include>
+                            <include>ru/otus/java/AgentCounter.*</include>
                         </includes>
                         <archive>
                             <manifest>
                                 <addClasspath>true</addClasspath>
                             </manifest>
                             <manifestEntries>
-                                <Premain-Class>ru.otus.java.MaxOttoVonStierlitz</Premain-Class>
+                                <Premain-Class>ru.otus.java.AgentCounter</Premain-Class>
                             </manifestEntries>
                         </archive>
                     </configuration>
