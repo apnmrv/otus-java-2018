@@ -31,7 +31,6 @@ public class AppTest extends TestCase
 
     public void testGetArrayList()
     {
-        System.out.println("Testing method getArrayList()...");
         String [] sArr = {"String1", "String2"};
         List<String> stringList = App.getArrayList(sArr);
 

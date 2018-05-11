@@ -6,9 +6,6 @@ import junit.framework.TestSuite;
 
 import java.util.*;
 
-/**
- * Unit test for simple App.
- */
 public class MyArrayListTest extends TestCase
 {
     /**
