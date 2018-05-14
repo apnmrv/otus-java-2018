@@ -35,6 +35,7 @@ public class App
         for(Iterator<?> it = myArrayListToTest.iterator(); it.hasNext();){
             System.out.printf("%s ", it.next());
         }
+        System.out.println("\n");
     }
 
     public static <T> List<T> getArrayList(T [] els) {

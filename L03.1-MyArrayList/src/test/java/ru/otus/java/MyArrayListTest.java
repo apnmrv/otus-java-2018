@@ -190,6 +190,26 @@ public class MyArrayListTest extends TestCase
         assertEquals(testList.getClass().getComponentType(), myList.getClass().getComponentType());
     }
 
+    public void testAddAtSpecifiedPosition(){
+        List <String> myList = new MyArrayList<>();
+        List <String> testList = new ArrayList<>();
+
+        for (int i = 0; i < 1000_000; i++) {
+            myList.add(i+"");
+            testList.add(i+"");
+        }
+
+        testList.add(5, "insertion");
+        myList.add(5, "insertion");
+
+        for (int i = 0; i < 1000_001; i++) {
+            assertEquals(testList.get(i), myList.get(i));
+        }
+
+        assertEquals(testList.size(), myList.size());
+        assertEquals(testList.getClass().getComponentType(), myList.getClass().getComponentType());
+    }
+
     public void testRemove(){
         List <String> myList = new MyArrayList<>();
         List <String> testList = new ArrayList<>();

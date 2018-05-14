@@ -193,9 +193,13 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public void add(int index, T element) {
-        int last = size;
-        add(get(last-1));
-        for (int i = last; i > index; i--) arr[i] = arr[i-1];
+        ensureCapacity(1);
+        System.arraycopy(
+                arr, index,
+                arr, index + 1,
+                size - index);
+        arr[index] = element;
+        size++;
     }
 
     @Override
@@ -206,21 +210,21 @@ public class MyArrayList<T> implements List<T> {
     }
 
     @Override
-    public int indexOf(Object o) {
+    public int indexOf(Object obj) {
         for (int i = 0; i < size(); i++) {
-            if(arr[i].equals(o)) return i;
+            if(arr[i].equals(obj)) return i;
         }
-        System.out.println("Element " + o.toString() + " not found in the list");
+        System.out.println("Element " + obj.toString() + " not found in the list");
         return 0;
     }
 
     @Override
-    public int lastIndexOf(Object o) {
+    public int lastIndexOf(Object obj) {
 
         for (int i = size; i >= 0; i--) {
-            if(arr[i].equals(o)) return i;
+            if(arr[i].equals(obj)) return i;
         }
-        System.out.println("Element " + o.toString() + " not found in the list");
+        System.out.println("Element " + obj.toString() + " not found in the list");
         return 0;
     }
 
