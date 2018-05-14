@@ -280,4 +280,15 @@ public class MyArrayListTest extends TestCase
             assertEquals(testList.get(i), myList.get(i));
         }
     }
+
+    public void testSubList(){
+        List <String> myList = new MyArrayList<>();
+
+        for (int i = 0; i < 100_000; i++) {
+            myList.add(i+"");
+        }
+
+        assertTrue("Method's not implemented", true);
+
+    }
 }

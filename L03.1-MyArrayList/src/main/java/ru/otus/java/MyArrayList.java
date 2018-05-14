@@ -4,7 +4,6 @@ import java.util.*;
 
 public class MyArrayList<T> implements List<T> {
 
-    //private static final int INIT_SIZE = 10;
     private T [] arr;
     private int size = 0;
     private int capacity = 10;
@@ -15,7 +14,7 @@ public class MyArrayList<T> implements List<T> {
 
     public MyArrayList( int initialCapacity ) {
         capacity = initialCapacity;
-        arr = (T[]) new Object[capacity];
+        arr = ( T [] ) new Object [capacity];
     }
 
     public MyArrayList(Collection<T> c) {
@@ -35,7 +34,7 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public boolean contains(Object obj) {
-        for (int i=0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if(obj == arr[i]) return true;
         }
         return false;
