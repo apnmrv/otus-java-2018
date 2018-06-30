@@ -4,53 +4,45 @@ import java.util.*;
 
 public class MyArrayList<T> implements List<T> {
 
-    private static final int INIT_SIZE = 10;
     private T [] arr;
     private int size = 0;
+    private int capacity = 10;
 
     public MyArrayList() {
-        this.arr = ( T [] ) new Object [INIT_SIZE];
+        arr = ( T [] ) new Object [capacity];
     }
 
-    public MyArrayList( int capacity ) {
-        if(capacity > INIT_SIZE) {
-            this.arr = (T[]) new Object[capacity + INIT_SIZE - capacity % INIT_SIZE];
-        } else this.arr = ( T [] ) new Object [INIT_SIZE];
+    public MyArrayList( int initialCapacity ) {
+        capacity = initialCapacity;
+        arr = ( T [] ) new Object [capacity];
     }
 
     public MyArrayList(Collection<T> c) {
-        int size = c.size();
-        if(size > INIT_SIZE){
-            size = size + INIT_SIZE - size % INIT_SIZE;
-            this.arr = ( T [] ) new Object [size];
-        } else this.arr = ( T [] ) new Object [INIT_SIZE];
-        c.toArray(this.arr);
-        this.size = size;
+        arr = ( T [] ) new Object [capacity];
+        addAll(c);
     }
 
     @Override
     public int size() {
-        return this.size;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return null == arr[0] ? true : false;
+        return 0 == size() ? true : false;
     }
 
     @Override
-    public boolean contains(Object o) {
-        for (T t : arr) {
-            if(t !=null && t.equals(o)) return true;
+    public boolean contains(Object obj) {
+        for (int i = 0; i < size; i++) {
+            if(obj == arr[i]) return true;
         }
         return false;
     }
 
     @Override
     public Iterator<T> iterator() {
-
         return new MyIterator();
-
     }
 
     private class MyIterator implements Iterator<T>{
@@ -84,7 +76,13 @@ public class MyArrayList<T> implements List<T> {
     @Override
     public T [] toArray() {
 
-        return Arrays.copyOf(arr, size);
+        T [] outputArr = (T[]) new Object[size];
+
+        System.arraycopy(arr, 0,
+                outputArr, 0,
+                size);
+
+        return outputArr;
     }
 
     @Override
@@ -97,16 +95,21 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public boolean add(T t) {
-        int i = size;
-        try {
-            arr[i] = t;
-        } catch (ArrayIndexOutOfBoundsException e)
-        {
-            arr = Arrays.copyOf(arr, i * 2);
-            arr[i] = t;
-        }
+        ensureCapacity(1);
+        arr[size] = t;
         size++;
+
         return true;
+    }
+
+    private void ensureCapacity(int addition){
+        if (size+addition > capacity) {
+            int newCapacity = capacity*3/2 + 1;
+            T [] newArr = (T[]) new Object [newCapacity];
+            System.arraycopy(arr, 0, newArr, 0, capacity);
+            arr = newArr;
+            capacity = newCapacity;
+        }
     }
 
     @Override
@@ -190,9 +193,13 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public void add(int index, T element) {
-        int last = size;
-        add(get(last-1));
-        for (int i = last; i > index; i--) arr[i] = arr[i-1];
+        ensureCapacity(1);
+        System.arraycopy(
+                arr, index,
+                arr, index + 1,
+                size - index);
+        arr[index] = element;
+        size++;
     }
 
     @Override
@@ -203,21 +210,21 @@ public class MyArrayList<T> implements List<T> {
     }
 
     @Override
-    public int indexOf(Object o) {
+    public int indexOf(Object obj) {
         for (int i = 0; i < size(); i++) {
-            if(arr[i].equals(o)) return i;
+            if(arr[i].equals(obj)) return i;
         }
-        System.out.println("Element " + o.toString() + " not found in the list");
+        System.out.println("Element " + obj.toString() + " not found in the list");
         return 0;
     }
 
     @Override
-    public int lastIndexOf(Object o) {
+    public int lastIndexOf(Object obj) {
 
         for (int i = size; i >= 0; i--) {
-            if(arr[i].equals(o)) return i;
+            if(arr[i].equals(obj)) return i;
         }
-        System.out.println("Element " + o.toString() + " not found in the list");
+        System.out.println("Element " + obj.toString() + " not found in the list");
         return 0;
     }
 
@@ -281,6 +288,6 @@ public class MyArrayList<T> implements List<T> {
     //@ TODO
     @Override
     public List<T> subList(int fromIndex, int toIndex) {
-        return null;
+        throw new UnsupportedOperationException("Method's not implemented.");
     }
 }

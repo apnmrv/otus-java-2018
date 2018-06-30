@@ -33,6 +33,8 @@ public class MyArrayListTest extends TestCase
 
         assertEquals(myList.isEmpty(), testList.isEmpty());
         assertEquals(myList.size(), testList.size());
+
+        assertEquals(testList.contains(null), myList.contains(null));
     }
 
     public void testMyArrayListSizedConstructor() {
@@ -40,29 +42,41 @@ public class MyArrayListTest extends TestCase
         List<?> myList = new MyArrayList<>(35);
         List<?> testList = new ArrayList<>(35);
 
-        assertEquals(myList.isEmpty(), testList.isEmpty());
+        assertEquals(testList.isEmpty(), myList.isEmpty());
 
-        assertEquals(myList.size(), testList.size());
+        assertEquals(testList.size(), myList.size());
 
+        assertEquals(testList.contains(null), myList.contains(null));
     }
 
     public void testMyArrayListFromCollectionConstructor() {
 
-        Collection<String> collection = new ArrayList<>();
-        collection.add("String1");
-        collection.add("String2");
+        Collection<String> c1 = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            c1.add("String"+i);
+        }
 
-        List <String> testList = new ArrayList<>(collection);
-        List <String> myList = new MyArrayList<>(collection);
+        List <String> testList1 = new ArrayList<>(c1);
+        List <String> myList1 = new MyArrayList<>(c1);
 
-        assertEquals(myList.isEmpty(), testList.isEmpty());
-        assertEquals(testList.size(), myList.size());
+        assertEquals(myList1.isEmpty(), testList1.isEmpty());
+        assertEquals(testList1.size(), myList1.size());
+
+        Collection<?> c2 = new HashSet<>();
+        for (int i = 0; i < 100; i++) {
+            c2.add(null);
+        }
+
+        List<?> testList2 = new ArrayList<>(c2);
+        List<?> myList2 = new MyArrayList<>(c2);
+
+        assertEquals(myList2.isEmpty(), testList2.isEmpty());
+        assertEquals(testList2.size(), myList2.size());
     }
 
     public void testSize(){
 
         List <Number> testlist = new ArrayList<>();
-
         List <Number> myList = new MyArrayList<>();
 
         assertEquals(myList.size(), testlist.size());
@@ -105,6 +119,10 @@ public class MyArrayListTest extends TestCase
 
         Object [] myArr = myList.toArray();
         Object [] testArr = testList.toArray();
+
+        assertEquals(testArr.getClass().getComponentType(), myArr.getClass().getComponentType());
+
+        assertEquals(testArr.length, myArr.length);
 
         for (int i = 0; i < 15; i++) {
             assertEquals(testArr[i], myArr[i]);
@@ -159,12 +177,32 @@ public class MyArrayListTest extends TestCase
     }
 
     public void testAdd(){
-        List <Integer> myList = new MyArrayList<>();
-        List <Integer> testList = new ArrayList<>();
+        List <String> myList = new MyArrayList<>();
+        List <String> testList = new ArrayList<>();
 
         for (int i = 0; i < 1000_000; i++) {
-            myList.add(i);
-            testList.add(i);
+            myList.add(i+"");
+            testList.add(i+"");
+            assertEquals(testList.get(i), myList.get(i));
+        }
+
+        assertEquals(testList.size(), myList.size());
+        assertEquals(testList.getClass().getComponentType(), myList.getClass().getComponentType());
+    }
+
+    public void testAddAtSpecifiedPosition(){
+        List <String> myList = new MyArrayList<>();
+        List <String> testList = new ArrayList<>();
+
+        for (int i = 0; i < 1000_000; i++) {
+            myList.add(i+"");
+            testList.add(i+"");
+        }
+
+        testList.add(5, "insertion");
+        myList.add(5, "insertion");
+
+        for (int i = 0; i < 1000_001; i++) {
             assertEquals(testList.get(i), myList.get(i));
         }
 
@@ -227,5 +265,50 @@ public class MyArrayListTest extends TestCase
         }
 
         testList.listIterator(6).hasPrevious();
+    }
+
+    public void testAddNull(){
+        List<?> testList = new ArrayList<>(10);
+        List<?> myList = new MyArrayList<>(10);
+
+        assertEquals(testList.size(), myList.size());
+        assertEquals(testList.isEmpty(), myList.isEmpty());
+
+        testList.add(null);
+        myList.add(null);
+
+        assertEquals(testList.size(), myList.size());
+        assertEquals(testList.isEmpty(), myList.isEmpty());
+
+        for (int i=0; i < testList.size(); i++){
+            assertEquals(testList.get(i), myList.get(i));
+        }
+    }
+
+    public void testContainsNull(){
+        List<?> testList = new ArrayList<>();
+        List<?> myList = new MyArrayList<>();
+
+        assertEquals(testList.contains(null), myList.contains(null));
+
+        testList.add(null);
+        myList.add(null);
+
+        assertEquals(testList.contains(null), myList.contains(null));
+
+        for (int i=0; i < testList.size(); i++){
+            assertEquals(testList.get(i), myList.get(i));
+        }
+    }
+
+    public void testSubList(){
+        List <String> myList = new MyArrayList<>();
+
+        for (int i = 0; i < 100_000; i++) {
+            myList.add(i+"");
+        }
+
+        assertTrue("Method's not implemented", true);
+
     }
 }
