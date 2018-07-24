@@ -1,0 +1,24 @@
+<configuration debug="true">
+    # Console appender
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            # Pattern of log message for console appender
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    # File appender
+    <appender name="FOUT" class="ch.qos.logback.core.FileAppender">
+        <file>test.log</file>
+        <append>true</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            # Pattern of log message for file appender
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FOUT" />
+    </root>
+</configuration>

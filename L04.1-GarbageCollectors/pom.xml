@@ -1,11 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>ru.otus.java</groupId>
-  <artifactId>L04.1-GarbageCollectors</artifactId>
+  <artifactId>GarbageCollectorsBenchmark</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>GC-Monitor</name>
+  <version>1.1-SNAPSHOT</version>
+  <name>GCBenchmark</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,11 +32,26 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>ru.otus.java.App</mainClass>
+              <mainClass>ru.otus.java.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+
+      <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+          <version>1.3.0-alpha4</version>
+      </dependency>
+
+      <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-access</artifactId>
+          <version>1.3.0-alpha4</version>
+      </dependency>
+
+  </dependencies>
 </project>

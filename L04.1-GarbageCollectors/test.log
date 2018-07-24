@@ -1,0 +1,237 @@
+23:10:47.782 [main] INFO  ru.otus.java.Main - GC in use : PS Scavenge
+23:10:47.785 [main] INFO  ru.otus.java.Main - GC in use : PS MarkSweep
+23:10:47.786 [main] INFO  ru.otus.java.Main - App's started at 927
+23:11:47.807 [Timer-0] INFO  ru.otus.java.Main - Minute 1, GcType: null, GcName: null, GcDuration: 0 ms
+23:11:47.808 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:11:47.808 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:12:47.795 [Timer-0] INFO  ru.otus.java.Main - Minute 2, GcType: null, GcName: null, GcDuration: 0 ms
+23:12:47.796 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:12:47.796 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:13:47.800 [Timer-0] INFO  ru.otus.java.Main - Minute 3, GcType: null, GcName: null, GcDuration: 0 ms
+23:13:47.800 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:13:47.801 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:14:47.805 [Timer-0] INFO  ru.otus.java.Main - Minute 4, GcType: null, GcName: null, GcDuration: 0 ms
+23:14:47.806 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:14:47.806 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:15:47.810 [Timer-0] INFO  ru.otus.java.Main - Minute 5, GcType: null, GcName: null, GcDuration: 0 ms
+23:15:47.811 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:15:47.811 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:16:47.816 [Timer-0] INFO  ru.otus.java.Main - Minute 6, GcType: null, GcName: null, GcDuration: 0 ms
+23:16:47.816 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:16:47.817 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:17:47.821 [Timer-0] INFO  ru.otus.java.Main - Minute 7, GcType: null, GcName: null, GcDuration: 0 ms
+23:17:47.822 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:17:47.822 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:18:47.823 [Timer-0] INFO  ru.otus.java.Main - Minute 8, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 12 ms
+23:18:47.823 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59988 ms
+23:18:47.824 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 12 ms
+23:19:47.826 [Timer-0] INFO  ru.otus.java.Main - Minute 9, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 26 ms
+23:19:47.826 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59974 ms
+23:19:47.826 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 26 ms
+23:20:47.829 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 31 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 80 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 40 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: PS MarkSweep, GcDuration: 177 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 138 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 148 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 81 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: PS MarkSweep, GcDuration: 719 ms
+23:20:47.830 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 106 ms
+23:20:47.831 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: PS MarkSweep, GcDuration: 612 ms
+23:20:47.831 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 57868 ms
+23:20:47.831 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 2132 ms
+23:21:16.353 [main] ERROR ru.otus.java.Main - OutOfMemoryError reached at 629462 
+ with an exception :
+GC overhead limit exceeded
+23:21:16.353 [main] INFO  ru.otus.java.Main - Exiting application...
+23:21:42.044 [main] INFO  ru.otus.java.Main - GC in use : PS Scavenge
+23:21:42.047 [main] INFO  ru.otus.java.Main - GC in use : PS MarkSweep
+23:21:42.050 [main] INFO  ru.otus.java.Main - App's started at 1016
+23:22:42.075 [Timer-0] INFO  ru.otus.java.Main - Minute 1, GcType: null, GcName: null, GcDuration: 0 ms
+23:22:42.075 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:22:42.076 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:23:42.062 [Timer-0] INFO  ru.otus.java.Main - Minute 2, GcType: null, GcName: null, GcDuration: 0 ms
+23:23:42.062 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:23:42.062 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:24:42.065 [Timer-0] INFO  ru.otus.java.Main - Minute 3, GcType: null, GcName: null, GcDuration: 0 ms
+23:24:42.065 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:24:42.065 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:25:42.070 [Timer-0] INFO  ru.otus.java.Main - Minute 4, GcType: null, GcName: null, GcDuration: 0 ms
+23:25:42.070 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:25:42.070 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:26:42.075 [Timer-0] INFO  ru.otus.java.Main - Minute 5, GcType: null, GcName: null, GcDuration: 0 ms
+23:26:42.075 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:26:42.075 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:27:42.079 [Timer-0] INFO  ru.otus.java.Main - Minute 6, GcType: null, GcName: null, GcDuration: 0 ms
+23:27:42.079 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:27:42.079 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:28:42.084 [Timer-0] INFO  ru.otus.java.Main - Minute 7, GcType: null, GcName: null, GcDuration: 0 ms
+23:28:42.085 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:28:42.085 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:29:42.089 [Timer-0] INFO  ru.otus.java.Main - Minute 8, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 17 ms
+23:29:42.090 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59983 ms
+23:29:42.090 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 17 ms
+23:30:42.095 [Timer-0] INFO  ru.otus.java.Main - Minute 9, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 27 ms
+23:30:42.095 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59973 ms
+23:30:42.095 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 27 ms
+23:31:42.101 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 32 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 74 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 43 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: PS MarkSweep, GcDuration: 193 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 144 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 169 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 90 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: PS MarkSweep, GcDuration: 793 ms
+23:31:42.102 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: PS Scavenge, GcDuration: 117 ms
+23:31:42.103 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: PS MarkSweep, GcDuration: 647 ms
+23:31:42.103 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 57698 ms
+23:31:42.103 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 2302 ms
+23:32:18.615 [main] ERROR ru.otus.java.Main - OutOfMemoryError reached at 637571 
+ with an exception :
+GC overhead limit exceeded
+23:32:18.696 [main] INFO  ru.otus.java.Main - Exiting application...
+23:42:08.422 [main] INFO  ru.otus.java.Main - GC in use : Copy
+23:42:08.434 [main] INFO  ru.otus.java.Main - GC in use : MarkSweepCompact
+23:42:08.436 [main] INFO  ru.otus.java.Main - App's started at 1429
+23:43:08.457 [Timer-0] INFO  ru.otus.java.Main - Minute 1, GcType: null, GcName: null, GcDuration: 0 ms
+23:43:08.465 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:43:08.465 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:44:08.444 [Timer-0] INFO  ru.otus.java.Main - Minute 2, GcType: null, GcName: null, GcDuration: 0 ms
+23:44:08.444 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:44:08.445 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:45:08.447 [Timer-0] INFO  ru.otus.java.Main - Minute 3, GcType: null, GcName: null, GcDuration: 0 ms
+23:45:08.447 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:45:08.447 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:46:08.451 [Timer-0] INFO  ru.otus.java.Main - Minute 4, GcType: null, GcName: null, GcDuration: 0 ms
+23:46:08.451 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:46:08.451 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:47:08.457 [Timer-0] INFO  ru.otus.java.Main - Minute 5, GcType: null, GcName: null, GcDuration: 0 ms
+23:47:08.457 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:47:08.457 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:48:08.463 [Timer-0] INFO  ru.otus.java.Main - Minute 6, GcType: null, GcName: null, GcDuration: 0 ms
+23:48:08.464 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:48:08.464 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:49:08.467 [Timer-0] INFO  ru.otus.java.Main - Minute 7, GcType: null, GcName: null, GcDuration: 0 ms
+23:49:08.468 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+23:49:08.468 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+23:50:08.471 [Timer-0] INFO  ru.otus.java.Main - Minute 8, GcType: Young Generation GC, GcName: Copy, GcDuration: 28 ms
+23:50:08.471 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59972 ms
+23:50:08.471 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 28 ms
+23:51:08.475 [Timer-0] INFO  ru.otus.java.Main - Minute 9, GcType: Young Generation GC, GcName: Copy, GcDuration: 61 ms
+23:51:08.475 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59939 ms
+23:51:08.476 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 61 ms
+23:52:08.479 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: Copy, GcDuration: 69 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: Copy, GcDuration: 129 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: Copy, GcDuration: 99 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: MarkSweepCompact, GcDuration: 120 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: Copy, GcDuration: 79 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: Copy, GcDuration: 110 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: MarkSweepCompact, GcDuration: 290 ms
+23:52:08.480 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59104 ms
+23:52:08.481 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 896 ms
+23:52:14.977 [main] ERROR ru.otus.java.Main - OutOfMemoryError reached at 607961 
+ with an exception :
+Java heap space
+23:52:14.978 [main] INFO  ru.otus.java.Main - Exiting application...
+00:35:19.359 [main] INFO  ru.otus.java.Main - GC in use : ParNew
+00:35:19.370 [main] INFO  ru.otus.java.Main - GC in use : ConcurrentMarkSweep
+00:35:19.372 [main] INFO  ru.otus.java.Main - App's started at 1338
+00:36:19.392 [Timer-0] INFO  ru.otus.java.Main - Minute 1, GcType: null, GcName: null, GcDuration: 0 ms
+00:36:19.393 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:36:19.393 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:37:19.379 [Timer-0] INFO  ru.otus.java.Main - Minute 2, GcType: null, GcName: null, GcDuration: 0 ms
+00:37:19.379 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:37:19.379 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:38:19.381 [Timer-0] INFO  ru.otus.java.Main - Minute 3, GcType: null, GcName: null, GcDuration: 0 ms
+00:38:19.382 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:38:19.382 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:39:19.389 [Timer-0] INFO  ru.otus.java.Main - Minute 4, GcType: null, GcName: null, GcDuration: 0 ms
+00:39:19.390 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:39:19.390 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:40:19.391 [Timer-0] INFO  ru.otus.java.Main - Minute 5, GcType: null, GcName: null, GcDuration: 0 ms
+00:40:19.391 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:40:19.391 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:41:19.400 [Timer-0] INFO  ru.otus.java.Main - Minute 6, GcType: null, GcName: null, GcDuration: 0 ms
+00:41:19.400 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:41:19.400 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:42:19.411 [Timer-0] INFO  ru.otus.java.Main - Minute 7, GcType: null, GcName: null, GcDuration: 0 ms
+00:42:19.412 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+00:42:19.412 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+00:43:19.419 [Timer-0] INFO  ru.otus.java.Main - Minute 8, GcType: Young Generation GC, GcName: ParNew, GcDuration: 52 ms
+00:43:19.420 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59948 ms
+00:43:19.420 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 52 ms
+00:44:19.422 [Timer-0] INFO  ru.otus.java.Main - Minute 9, GcType: Young Generation GC, GcName: ParNew, GcDuration: 58 ms
+00:44:19.422 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59942 ms
+00:44:19.423 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 58 ms
+00:45:19.425 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: ParNew, GcDuration: 67 ms
+00:45:19.425 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: ParNew, GcDuration: 137 ms
+00:45:19.425 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: ConcurrentMarkSweep, GcDuration: 5288 ms
+00:45:19.425 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: ParNew, GcDuration: 86 ms
+00:45:19.425 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: ParNew, GcDuration: 136 ms
+00:45:19.426 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: ParNew, GcDuration: 135 ms
+00:45:19.426 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: ConcurrentMarkSweep, GcDuration: 501 ms
+00:45:19.426 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: ConcurrentMarkSweep, GcDuration: 223 ms
+00:45:19.427 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 53427 ms
+00:45:19.427 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 6573 ms
+00:45:30.067 [main] ERROR ru.otus.java.Main - OutOfMemoryError reached at 612023 
+ with an exception :
+Java heap space
+00:45:30.067 [main] INFO  ru.otus.java.Main - Exiting application...
+08:11:54.982 [main] INFO  ru.otus.java.Main - GC in use : G1 Young Generation
+08:11:54.988 [main] INFO  ru.otus.java.Main - GC in use : G1 Old Generation
+08:11:54.990 [main] INFO  ru.otus.java.Main - App's started at 939
+08:12:55.043 [Timer-0] INFO  ru.otus.java.Main - Minute 1, GcType: null, GcName: null, GcDuration: 0 ms
+08:12:55.043 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+08:12:55.043 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+08:13:54.997 [Timer-0] INFO  ru.otus.java.Main - Minute 2, GcType: null, GcName: null, GcDuration: 0 ms
+08:13:54.997 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+08:13:54.997 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+08:14:55.003 [Timer-0] INFO  ru.otus.java.Main - Minute 3, GcType: null, GcName: null, GcDuration: 0 ms
+08:14:55.003 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+08:14:55.003 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+08:15:55.004 [Timer-0] INFO  ru.otus.java.Main - Minute 4, GcType: null, GcName: null, GcDuration: 0 ms
+08:15:55.004 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+08:15:55.004 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+08:16:55.008 [Timer-0] INFO  ru.otus.java.Main - Minute 5, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 5 ms
+08:16:55.008 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59995 ms
+08:16:55.008 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 5 ms
+08:17:55.013 [Timer-0] INFO  ru.otus.java.Main - Minute 6, GcType: null, GcName: null, GcDuration: 0 ms
+08:17:55.013 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+08:17:55.014 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+08:18:55.018 [Timer-0] INFO  ru.otus.java.Main - Minute 7, GcType: null, GcName: null, GcDuration: 0 ms
+08:18:55.018 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 60000 ms
+08:18:55.018 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 0 ms
+08:19:55.020 [Timer-0] INFO  ru.otus.java.Main - Minute 8, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 8 ms
+08:19:55.020 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59992 ms
+08:19:55.021 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 8 ms
+08:20:55.024 [Timer-0] INFO  ru.otus.java.Main - Minute 9, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 50 ms
+08:20:55.024 [Timer-0] INFO  ru.otus.java.Main - Minute 9, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 70 ms
+08:20:55.024 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 59880 ms
+08:20:55.024 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 120 ms
+08:21:55.030 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 32 ms
+08:21:55.030 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 62 ms
+08:21:55.030 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 41 ms
+08:21:55.030 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 43 ms
+08:21:55.030 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 40 ms
+08:21:55.030 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 11 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 18 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 58 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 33 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 18 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 16 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 16 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 20 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 25 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 24 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 29 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 30 ms
+08:21:55.032 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 282 ms
+08:21:55.033 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 73 ms
+08:21:55.033 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Young Generation GC, GcName: G1 Young Generation, GcDuration: 2 ms
+08:21:55.033 [Timer-0] INFO  ru.otus.java.Main - Minute 10, GcType: Old Generation GC, GcName: G1 Old Generation, GcDuration: 501 ms
+08:21:55.033 [Timer-0] INFO  ru.otus.java.Main - App runtime duration total : 58626 ms
+08:21:55.033 [Timer-0] INFO  ru.otus.java.Main - GC activity duration total : 1374 ms
+08:22:03.807 [main] ERROR ru.otus.java.Main - OutOfMemoryError reached at 609747 
+ with an exception :
+Java heap space
+08:22:03.808 [main] INFO  ru.otus.java.Main - Exiting application...
